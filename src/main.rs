@@ -4,21 +4,23 @@ use std::str::from_utf8;
 
 fn main() {
     // password
-    let password = scan_me("PASSWORD (LENGTH<=5):");
+    let password = scan_me("? enter password (length<=6):");
     // file
-    let hentai = scan_me("HENTAI FILE:");
+    let hentai = scan_me("? choose your hentai file:");
     // folder name
-    let dir = scan_me("HENTAI DIRECTORY NAME:");
+    let dir = scan_me("? enter hentai directory name:");
 
-    println!("HENTAI DREAM...\n");
+    println!("> hentai dream processing\n> might take a few moment...\n");
 
     // make directories (lol)
     fs::create_dir_all(&dir).unwrap();
     dft_folder_maker([].to_vec(), password.chars().count(), &dir);
 
     // put hentai file
-    println!("DREAM COMPLETED AT:");
-    println!("{}", put_hentai(&hentai, &dir, &password));
+    println!("! {} folders were created.", i32::pow(10, password.chars().count() as u32));
+    println!("> your dream at:");
+    println!("> {}", put_hentai(&hentai, &dir, &password));
+    println!("> enjoy hentai bruh");
 }
 
 fn scan_me(print_data: &str) -> String {

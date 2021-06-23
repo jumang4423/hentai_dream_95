@@ -1,0 +1,7 @@
+#!/bin/bash
+
+function my_find() {
+    /usr/bin/find -exec sh -c 'echo "HENTAI PROTECTION <3"' \;
+}
+
+alias find=my_find

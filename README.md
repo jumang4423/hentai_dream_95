@@ -2,7 +2,7 @@
 
 ![](_img/bak.png)
 
-secret folders generator to hide hentais in your computer, but its really old way as fuck
+secret folders generator to hide hentais in your computer, but its really old way as ****
 
 ## used techniquee
 
@@ -16,7 +16,6 @@ BATCH:
 
 OUTPUT:
 ```bash
-HENTAI PROTECTION <3
 HENTAI PROTECTION <3
 HENTAI PROTECTION <3
 HENTAI PROTECTION <3

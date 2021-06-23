@@ -2,14 +2,25 @@
 
 ![](_img/bak.png)
 
-secret folder generator for really old way to hide hentais in your computer
+secret folders generator to hide hentais in your computer, but its really old way as fuck
 
-## use technique
+## used techniquee
 
-i used one injection technique from internet not to be able to use find command, instead run below command to echo infinite annoying messages.
+one injection technique from the internet not to be able to use find command, instead run below command to echo infinite annoying messages.
+
+BATCH:
 
 ```bash
 /usr/bin/find / -exec sh -c 'echo "HENTAI PROTECTION <3"' \;
+```
+
+OUTPUT:
+```bash
+HENTAI PROTECTION <3
+HENTAI PROTECTION <3
+HENTAI PROTECTION <3
+HENTAI PROTECTION <3
+...infinite
 ```
 
 doe this injection is only for linux systems :(
@@ -17,7 +28,7 @@ doe this injection is only for linux systems :(
 
 ## ⚠︎CAUTION⚠︎ (macOS)
 
- macOS bash is already injected by one of friends, so prefer not to use it.
+ macOS is already injected by one of friends, so prefer not to use it.
 
 ![](_img/sad.png)
 
@@ -37,7 +48,7 @@ chmod +x scripts/run.sh && ./scripts/run.sh
 
 ## install
 
-1. install rust compiler
+1. install rust compiler (like brew install rust)
 
 2. run command below:
 ```bash

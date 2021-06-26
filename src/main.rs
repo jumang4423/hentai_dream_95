@@ -3,16 +3,19 @@ use std::io::*;
 use std::str::from_utf8;
 
 fn main() {
+
     let password = scan_me("? enter password (length<=6):");
     let hentai = scan_me("? choose your hentai file:");
     let dir = scan_me("? enter hentai directory name:");
 
-    println!("> hentai dream processing\n> might take a few moment...\n");
+    println!("> hentai dream processing");
+    print!("> ");
 
     // make tons of directories (lol)
     fs::create_dir_all(&dir).unwrap();
     dft_folder_maker([].to_vec(), password.chars().count(), &dir);
 
+    println!("");
     // copy hentai file
     println!(
         "! {} folders were created.",
@@ -36,8 +39,8 @@ fn scan_me(print_data: &str) -> String {
     return _scaned_string;
 }
 
-fn dft_folder_maker(array: Vec<u8>, count: usize, dir: &String) {
-    if count != 0 {
+fn dft_folder_maker(array: Vec<u8>, count_mut: usize, dir: &String) {
+    if count_mut != 0 {
         for i in 0..10 {
             let mut new_array = array.clone();
             new_array.push(i as u8);
@@ -50,7 +53,7 @@ fn dft_folder_maker(array: Vec<u8>, count: usize, dir: &String) {
                     .join("/");
 
             fs::create_dir_all(joined).unwrap();
-            dft_folder_maker(new_array, count - 1, &dir);
+            dft_folder_maker(new_array, count_mut - 1, &dir);
         }
     }
 }

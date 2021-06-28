@@ -1,8 +1,9 @@
 use std::fs;
+use std::io;
 
 mod functions;
 
-fn main() {
+fn main() -> io::Result<()>  {
 
     let password = functions::scan_me::scan_me("? enter password (length<=6):");
     let hentai = functions::scan_me::scan_me("? choose your hentai file:");
@@ -24,4 +25,6 @@ fn main() {
     println!("> your dream at:");
     println!("> {}", functions::put_hentai::put_hentai(&hentai, &dir, &password));
     println!("> enjoy hentai bruh :8)");
+
+    Ok(())
 }

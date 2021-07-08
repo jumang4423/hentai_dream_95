@@ -11,7 +11,8 @@ pub fn put_hentai(hentai_file: &String, dir: &String, password: &String) -> Stri
             .join("/"),
         hentai_file
     );
-    fs::copy(hentai_file, &joined).unwrap();
-
-    joined
+    match fs::copy(hentai_file, &joined) {
+        Ok(_) => return joined,
+        Err(_) => return "no file".to_string()
+    }
 }
